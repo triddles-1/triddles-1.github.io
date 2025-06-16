@@ -2,128 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Triddles" />
+  <meta name="description" content="DevOps & Cybersecurity portfolio by Triddles" />
   <title>Triddles | DevOps & Cybersecurity</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #1a73e8;
+      --bg: #f4f6f8;
+      --text: #1a1a1a;
+      --card: #fff;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: 'Fira Code', monospace;
-      background-color: #0f0f0f;
-      color: #ffffff;
-      line-height: 1.6;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
     header {
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
-      background: #1a1a1a;
-      border-bottom: 2px solid #2e2e2e;
+      background: var(--primary);
+      color: #fff;
     }
-    h1 {
+    header h1 {
       margin: 0;
       font-size: 2.5rem;
-      color: #00ffe1;
     }
-    p.subtitle {
-      font-size: 1.2rem;
-      color: #a0a0a0;
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
     }
-    section {
-      max-width: 900px;
+    .container {
+      max-width: 1000px;
       margin: auto;
-      padding: 2rem;
-    }
-    .section-title {
-      color: #00ffe1;
-      border-bottom: 1px solid #333;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
+      padding: 2rem 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
     }
     .card {
-      background: #1e1e1e;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      box-shadow: 0 0 10px rgba(0,255,225,0.1);
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.2s;
     }
-    a {
-      color: #00ffe1;
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card a {
       text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
     }
     footer {
       text-align: center;
-      padding: 2rem;
-      color: #666;
-      border-top: 1px solid #333;
-    }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .skill {
-      background: #00ffe1;
-      color: #000;
-      padding: 0.3rem 0.7rem;
-      border-radius: 5px;
+      padding: 2rem 1rem;
       font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Triddles</h1>
+    <p>DevOps & Cybersecurity Enthusiast | Continuous Learner | Tool Builder</p>
+  </header>
 
-<header>
-  <h1>Triddles</h1>
-  <p class="subtitle">DevOps & Cybersecurity Enthusiast</p>
-</header>
+  <section class="container">
+    <div class="card">
+      <h2>📄 Write-Ups</h2>
+      <p>Technical deep dives, Git notes, and cyber labs.</p>
+      <a href="writeups/">Go to Write-ups →</a>
+    </div>
+    <div class="card">
+      <h2>⚙️ Projects</h2>
+      <p>Hands-on projects in CI/CD, cloud, and security automation.</p>
+      <a href="projects/">Explore Projects →</a>
+    </div>
+    <div class="card">
+      <h2>👤 About Me</h2>
+      <p>My background, journey, and interests.</p>
+      <a href="about/">Read About Me →</a>
+    </div>
+    <div class="card">
+      <h2>🧰 Tools</h2>
+      <p>Scripts, cheat sheets, and tools I use or created.</p>
+      <a href="tools/">Check Tools →</a>
+    </div>
+  </section>
 
-<section>
-  <div class="section-title">🚀 About Me</div>
-  <p>I’m passionate about automation, cloud computing, infrastructure as code, and digital defense. I build reliable, secure systems from the ground up. Currently learning and building hands-on projects in Linux, CI/CD, AWS, Docker, and cybersecurity labs.</p>
-</section>
-
-<section>
-  <div class="section-title">🔧 Skills</div>
-  <div class="skills">
-    <div class="skill">Linux</div>
-    <div class="skill">Docker</div>
-    <div class="skill">Git & GitHub</div>
-    <div class="skill">Ansible</div>
-    <div class="skill">Kubernetes</div>
-    <div class="skill">AWS</div>
-    <div class="skill">CI/CD</div>
-    <div class="skill">Python</div>
-    <div class="skill">Nmap</div>
-    <div class="skill">Burp Suite</div>
-    <div class="skill">Metasploit</div>
-  </div>
-</section>
-
-<section>
-  <div class="section-title">🧠 Projects</div>
-  <div class="card">
-    <h3>DevOps Project: CI/CD Pipeline</h3>
-    <p>Built a complete CI/CD pipeline using GitHub Actions, Docker, and AWS EC2. Integrated unit testing and auto-deployment on push.</p>
-    <a href="#">View on GitHub →</a>
-  </div>
-  <div class="card">
-    <h3>Cybersecurity Lab: Vulnerability Testing</h3>
-    <p>Performed reconnaissance, scanning, and exploitation on a simulated vulnerable web app using Nmap, Nikto, and Burp Suite.</p>
-    <a href="#">Writeup →</a>
-  </div>
-</section>
-
-<section>
-  <div class="section-title">📫 Contact</div>
-  <p>Email: <a href="mailto:lamartriddles@gmail.com">lamartriddles@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/triddles-1">github.com/triddles-1</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
-</section>
-
-<footer>
-  &copy; 2025 Triddles. Built with ❤️ and terminal commands.
-</footer>
-
+  <footer>
+    &copy; 2025 Triddles | Built with ❤️ and GitHub Pages
+  </footer>
 </body>
 </html>
