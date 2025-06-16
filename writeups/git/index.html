@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Git and GitHub write-up by Triddles">
+  <meta name="author" content="Triddles">
+  <meta name="keywords" content="Git, GitHub, Version Control, Triddles, DevOps, Git tutorial">
+  <meta property="og:title" content="Git & GitHub Write-up by Triddles">
+  <meta property="og:description" content="Comprehensive guide and personal notes on using Git and GitHub.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://triddles-1.github.io">
+  <meta property="og:image" content="https://triddles-1.github.io/thumbnail.png">
+  <title>Git & GitHub Write-up | Triddles</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      color: #1a73e8;
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    code {
+      background: #eee;
+      padding: 0.2em 0.4em;
+      border-radius: 5px;
+    }
+    pre {
+      background: #222;
+      color: #eee;
+      padding: 1em;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Git & GitHub Write-up</h1>
+    <p><strong>By Triddles</strong></p>
+    <hr />
+  </header>
+
+  <main>
+    <h1>A beginner introduction to Git</h1>
+
+    <p>welcome, you might be wondering why this topic. you’ve come to the right place. Git is a very essential tool as a cybersecurity guy. whether DevOps, offensive security and blue team we all use git. so I put together this blog to aid in your git journey
+    
+    Git comes preinstalled in some Linux distros but for windows it is not. download git from <a href="https://git-scm.com/downloads">Git download page</a> . select your operating system and download. git will show you how to install it too.</p>
+    
+    <h2>GIT COMMITS</h2>
+    
+    <p>we will start with git commit. what is git commit?<br>
+    
+    A commit in git keeps a history of snapshot of all the files you’ve tracked in your directory. git  also maintains a history of which commits were made and when it was made. Maintaining history is great for everyone working on the project. you get to to know who and when committed to the piece of code.</p>
+    
+    **Git Branches**
+    
+    git branches are just pointers to commits, that all. to make a git branch all you have to type  is “*git branch [name of branch]”* after that you can now commit that branch. but if you want to create a branch and commit at the same time you can use the *“checkout” **.*** you just type “*git checkout -b [branch name]”* .
+    
+    **Branches and Merging**
+    
+    Now that we understand how to make commits and create branches, the next step is learning how to merge work from two different branches. This will enable us to create a branch for developing a new feature and later integrate those changes back into the main branch.
+    
+    the first thing we will learn is “*git merge”*. 
+    
+    Merging in Git creates a special commit that has two unique parents. now you can add two branches with different “parents”, and set within either of them.
+    
+    Lets say you are two people working on a project, and either of you is working on a feature, we can say you both have different branches that you work on. we have two branches; each has one commit that's unique. This means that neither branch includes the entire set of "work" in the repository that you have done.
+    
+    to merge a branch to a branch eg ‘feature’ to ‘main’ you will type “*git merge feature”*
+  </main>
+
+  <footer>
+    <hr />
+    <p>📍 Hosted on <a href="https://triddles-1.github.io" target="_blank">GitHub Pages</a></p>
+  </footer>
+</body>
+</html>
+
