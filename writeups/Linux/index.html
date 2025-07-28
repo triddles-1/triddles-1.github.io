@@ -113,7 +113,20 @@ and the last one belongs to other categories.
 </p>
 <h3>INSTALLING PACKAGES</h3>
 <p>
-    
+    linux has different ways of installing packages or application, first of all it depends on the distro of linux one is using,
+    but it's assumed you are probably using debian related Linux.
+    with that we have different ways too. the first is:
+    <ul>
+        <li>using the APT:</li> user will have to type sudo apt install package. the APT has a whole range of arguments you can use, eg. purge,remove search,etc..
+        <li>using the .deb package: </li> user will have to download a debian package and install. we will make use of the 
+        <code>sudo dpkg -i <i>package-name</i></code><br>
+        <code>dpkg -unpack .deb</code></codedpkg> put all important files in their respective places but does not configure. <br>
+        <code>dpkg -configure</code> requires package name not file name <br>
+        <code>dpkg -r </code>removes the software but does not delete the configuration files so data will remain <br>
+        <code>dpkg -p <i>package</i></code> removes everything about the software
+        <li>some debian uses snap,etc </li>
+
+    </ul>
 </p>
 
 
