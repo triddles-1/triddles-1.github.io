@@ -96,6 +96,30 @@ and the last one belongs to other categories.
 </p>
 <h3>CHANGING OWNERSHIP</h3>
 <p>to change the ownwership of a file from userA to another user, we use the <code>chown</code> command. we type out <code>sudo chown old_owner:new_owner</new_ownwer></old_owner></code> </p>
+<h3>OCTAL VERSIONS OF PERMISSIONS</h3>
+<p>
+    sometimes a user wouldn't want to use the alphabet way of granting and revoking permissions. this is where the octal Version comes in.
+    it might seem confusing at first, but Understanding the basics will help you understand it well.
+    <ul>
+        <li><code>1</code> means execute</li>
+        <li><code>2</code>means write</li>
+        <li><code>4</code>means read</li>
+    </ul>
+    usersshould put it in mind that no matter which two permission you add together, it is either equal to or below 6. if a user is supposed
+    to have read,write and execute we wll represent it with "7" meaning 1(execute)+2(write)+4(read)=7(full permission)
+    if a user has only read and execute the octal value will be 5.
+    A read and write for users will be 6, group and others only have read permission that is 4; thereby the end result will be
+    <code>chmod 644 new_file</code>
+</p>
+<h3>INSTALLING PACKAGES</h3>
+<p>
+    
+</p>
+
+
+
+
+
 
 
   </main>
