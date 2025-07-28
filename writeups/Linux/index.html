@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Git and GitHub write-up by Triddles">
+  <meta name="author" content="Triddles">
+  <meta name="keywords" content="Git, GitHub, Version Control, Triddles, DevOps, Git tutorial">
+  <meta property="og:title" content="Git & GitHub Write-up by Triddles">
+  <meta property="og:description" content="Comprehensive guide and personal notes on using Git and GitHub.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://triddles-1.github.io">
+  <meta property="og:image" content="https://triddles-1.github.io/thumbnail.png">
+  <title>Git & GitHub Write-up | Triddles</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      color: #1a73e8;
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    code {
+      background: #eee;
+      padding: 0.2em 0.4em;
+      border-radius: 5px;
+    }
+    pre {
+      background: #222;
+      color: #eee;
+      padding: 1em;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>INTRODUCTION TO LINUX</h1>  
+    <p><strong>By Triddles</strong></p>
+    <hr />
+  </header>
+
+  <main>
+ <p>every DevOps engineer will have to be proficient in linux to be better at his work. Linux is an operating system which
+    is used mostly by security proffesional due to it customizabilty, fast usage and it being open sourced. without further ado let's get into how linux is being
+    used in the field.
+ </p>
+ <p>To create a folder or directory you use the <code>mkdir</code> command</p>Use <code>mkdir new_folder</code> to create
+ a directory called "new_folder". <b>NB:</b>linux is case sensitive so "new" and "New" are not the same.<br> 
+ use the <code>ls</code> command to list what item inside a directory. it will just list the items but if you want to see all
+ items plus hidden ones use <code>ls -a</code>  to list all itemsincluding hidden ones.E.g; ls -a new_folder<br>
+ Use the command <code>ls -la</code> to list everything inside of a directoryin a long list manner. E.g; ls -la new_folder
+ <p><code>cat</code> is used to read out files or output files to the screen. <br>
+<code>touch</code> is used to create empty files. eg. <code>touch new_file</code><br>
+<code>echo</code> is used to output strings onto the screen </p>
+
+<h3>FILE PERMISSIONS</h3>
+<p>In linux there are different kind of file permissions since it is a multi-user operating system. every user is assigned it's 
+    own permissions. userA cant have access to userB without the proper permissions. when you list a directory with <code>ls -la</code>
+therefore making it list out all hidden items and normal  items with their permissions, you will see something like <code>drwxrwxrwx</code>. 
+now it has a meaning. <br>
+<ol>
+    <li><code>d</code>stands for directory. that is if that particular item is a directory, if its not it will be replaced with a dash</li>
+    <li><code>r</code>stand for read. that is if the user has read permissions on the file</li>
+    <li><code>w</code>stands for write. that is if the user has write permissions on the file</li>
+    <li><code>x</code>stands for executable. that is if the user can execute a particular file or script. </li>
+</ol>
+now that we know what it means lets go back and look at the permissions again, you will find out that the ,<code>rwx</code> appears thrice.
+the reason is every user has a group they belong to. so the first rwx of the permission belong to the user, the next one belongs to the group the user is in. 
+and the last one belongs to other categories.
+</p>
+<h3>CHANGING PERMISSIONS</h3>
+<p>you might get to a time that you will want to change permissions of a user on a particular file, Linux gives us the opportunity to
+    change permissions. first of all, to change permission you must be root or a sudo user. a sudo user is a user that can temporarily Use
+    the root for sometime. The command to change permission is <code>chmod</code>. to remove the read and write permissio from the 
+    group, one can type <code>sudo chmod g-rw new_file</code>you will get the end result like <code>rwx--x-rwx</code>. This will remove
+    the permission of the group and replace it with dashes. 
+
+
+</p>
+
+    
+  </main>
+
+  <footer>
+    <hr />
+    <p>📍 Hosted on <a href="https://triddles-1.github.io" target="_blank">GitHub Pages</a></p>
+  </footer>
+</body>
+</html>
+
