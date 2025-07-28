@@ -78,7 +78,7 @@ now it has a meaning. <br>
     <li><code>w</code>stands for write. that is if the user has write permissions on the file</li>
     <li><code>x</code>stands for executable. that is if the user can execute a particular file or script. </li>
 </ol>
-now that we know what it means lets go back and look at the permissions again, you will find out that the ,<code>rwx</code> appears thrice.
+now that we know what it means lets go back and look at the permissions again, you will find out that the <code>rwx</code> appears thrice.
 the reason is every user has a group they belong to. so the first rwx of the permission belong to the user, the next one belongs to the group the user is in. 
 and the last one belongs to other categories.
 </p>
@@ -88,11 +88,16 @@ and the last one belongs to other categories.
     the root for sometime. The command to change permission is <code>chmod</code>. to remove the read and write permissio from the 
     group, one can type <code>sudo chmod g-rw new_file</code>you will get the end result like <code>rwx--x-rwx</code>. This will remove
     the permission of the group and replace it with dashes. 
-
-
 </p>
+<h3>CHANGING GROUP</h3>
+<p>To change the group a file belongs to, you will need the <code>chgrp</code> command. it changes the group a file belongs to, 
+    thereby making sure users in that group get access to it. all youhave to do is type <code>sudo chgrp "group_name" file_name</code> eg.
+    <code>sudo chgrp triddles new_file</code> this changes whatever group there to triddles group.
+</p>
+<h3>CHANGING OWNERSHIP</h3>
+<p>to change the ownwership of a file from userA to another user, we use the <code>chown</code> command. we type out <code>sudo chown old_owner:new_owner</new_ownwer></old_owner></code> </p>
 
-    
+
   </main>
 
   <footer>
