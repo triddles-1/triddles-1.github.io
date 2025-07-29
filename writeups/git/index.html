@@ -118,9 +118,50 @@
     </p>
     <h3>Checking git history</h3>
     <p>
-      
+      <code>git log</code> displays the history of commits and chages we've done across the developments. Each commit gets a <ul>
+        <li>unique committ hash</li>
+        <li>commit message</li>
+        <li>author and date</li>
+      </ul>
+      use <code>git checkout <i>commit_hash</i></code> to go to a previous Version
     </p>
-  
+    <h3>Undoing commits</h3>
+    <p>
+      when you commit locally without pushing, then you realize that you made a mistake or tere's still some changes to be made. you use "reset --hard HEAD~1" for the 
+      last commit. if you want the last but one commit you change it to HEAD~2. <br>
+      you can use <code>git reset --soft HEAD~1</code> to keep changes but still be allowed to make changes to the commit. soft is also
+      the default option, so even if you remove "-soft" from the command it still works.
+      use <code>git commit -amend</code> to amend the commit messages and also doesn't change to the last commit. <br>
+      when you push you cant revert with <code>git reset</code> as you did locally, but you can do that with <code>git push --force</code>
+      <b>Do not do this in master or develop branch or a branch where a lot of people work together</b>
+    </p>
+    <p>
+      <code>git revert <i>commit_hash</i></code> will revert to a commit assuming there's a lot of commits. it doesn't override
+      but creates a new commit that contains the old changes.
+    </p>
+    <h3>Merging branches</h3>
+    <p>
+      to merge , first checkout to the branch you want to perform the merge at. use <code>git branch <i>source branch</i></code>
+      where source brnch is the branch you want to merge into your working branch, it is mostly the master branch
+    </p>
+    <h3>Git for DevOps</h3>
+    when you are in devops you will get acess to files like;<ul>
+      <li>infrastructure as a Service</li>
+   
+    <ol>
+      <li>Kubernetes configuration files</li>
+      <li>Terraform and ansible configuration files</li>
+      <li>Bash and python scripts</li>
+    </ol>
+    this files will need some changes wwith time and needs to be tracked. it must be securely stored in one place hence gitlab and
+    github. it must be shareable for devops team.
+  <li>CI/CD pipeline and Build automation</li>
+  <ol>
+    <li>    checkout code, test and build application, etc...    </li>
+    <li>need integration for the build automation tool with application git repository</li>
+    <li>setup integration with build automation tool and git repository</li>
+  </ol>
+  </ul>
   </main>
 
   <footer>
