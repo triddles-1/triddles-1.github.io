@@ -81,8 +81,46 @@
     Lets say you are two people working on a project, and either of you is working on a feature, we can say you both have different branches that you work on. we have two branches; each has one commit that's unique. This means that neither branch includes the entire set of "work" in the repository that you have done.
     
     to merge a branch to a branch eg ‘feature’ to ‘main’ you will type <code>“git merge feature”</code></p>
-
-    
+    <h3>Deleting branch</h3>
+    <p>you can use the UI from your hosting site to delete branch or you can use the CLI. to delete the branch in CLI, just type <code>git branch -d <i>branch_name</i></code>
+    </p>
+    <h3>REBASE(To avoid merge conflicts)</h3>
+    <p>
+      when a change is done remotely and local repository is not aware, when you push code, there will be a conflict. so you have to pull before
+      you can push your changes. This might be tedious. the easier way to do it and avod conflict is <code>git pull -r </code>. it pulls the latest remote repo and stack ours to it easily.
+      after youre doing rebasing you can now push with <code>git push</code>
+    </p>
+    <h3>Resolving Merge Conflicts</h3>
+    <p>
+      when you get a nwerge conflict for changing the same lines of code simultaneously, you will need to manually solve the conflict
+      after manually solving it, you use the <code>git rebase --continue</code> to build it up, then yoou push it.
+    </p>
+    <h3>.gitignore</h3>
+    <p>
+      .gitignore is not a command but rather a text file that contains some informatiion, telling git to ignore some files.
+      <ul>
+        <li>Add .gitignore file to your project's root directory</li>
+        <li>It is used to exclude certain files or folders from being tracked by git</li>
+        <li>folders like build, .ideas and node_modules should not be tracked</li>
+        <li>list all folders and files you dont want to be tracked inside .gitignore file</li>
+        <li>If there is a tracking on folders because you have already committed some of them, you can use <code>git rm -r --cached <i>file/folder</i></code></li>
+        <li>after that, check git status, commit and push</li>
+      </ul>
+    </p>
+    <h3>GIT STASH</h3>
+    <p>
+      if i made some local changes and i want to switch branch without commiting the changes, maybe im not sure of the codes. when
+      you checkout without committing you will get an error. what you need to do is to "stash" it. By typing <code>git stash</code>
+      it saves the curent changes for later. now you can checkout to anoter branch without any error message. To get back to your changes
+      use <code>git stash pop </code>. <br>
+      Another case use is when we ake changes and there's a break in the app. we can use stashing to hide our changes temporarily to test if
+      app works without our code changes.
+    </p>
+    <h3>Checking git history</h3>
+    <p>
+      
+    </p>
+  
   </main>
 
   <footer>
