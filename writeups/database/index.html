@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Triddles">
+  <meta name="description" content="A collection of DevOps & cybersecurity write-ups by Triddles">
+  <title>Write-ups | Triddles</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #1a73e8;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    .writeup {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: 0.2s;
+    }
+    .writeup:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .writeup a {
+      text-decoration: none;
+      color: #1a73e8;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .writeup p {
+      margin-top: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>DATABASE FOR DEVOPS</h1>  
+        <p><strong>By Triddles</strong></p>
+        <hr />
+      </header>
+
+  <main>
+    <h2>Databases in software developments</h2>
+    <p>Developers need databases for local developments. they need them to test how the application really works.
+        To use the database in the development phase, there are three options you can use.
+        <ul>
+            <li>option 1: database hosted locally</li>each developer install the database locally, eg, Mysql <br> each developer has his own dataset that he is using.
+                <ul>
+                    <li>Pros:</li>you can't mess with someone else's test database data
+                    <li>Cons:</li>you have to start from an empty database <br> you need realistic test data <br>install and setup database for every developer
+                </ul>
+            <li>option 2: DAtabase hosted remotely</li>
+                <ul>
+                    <li>pros:</li>no needd for local installation <br> start coding right away <br> test data is available right away.
+                    <li>cons:</li> cant play around without affecting others.
+                </ul>
+            <li>option 3: Database have both local and remote</li>
+        </ul>
+    </p>
+    <h3>How does the app talks to the database</h3>
+    <ul>
+        <li>In your application code you configure the database connectivity.</li>
+        <li>Each programming language has a library/modules for database connection</li>
+        <li>You have to tell the library, which database to talk to and how to <b>AUTHENTICATE</b> with that database.</li>
+        you also need credential and the database endpoint..
+    </ul>
+    <p>
+        Do not hardcode the database endpoint and credentials. Define them in one place as enviroment variables so you can confi from outside. To change database, we just change it from the configuration files.
+        <br><br>Depending on environment(dev,test,prod) it all connects to different databses. Each has a different endpoint and credentials with production being more secured.
+        <br>In the config files;
+        <ul>
+            <li>Define variable in code</li>
+            <li>Set endpoint and credentials from outside each environmnet</li>
+            <li>Pass environment variables on app start up through command line or configuration in code editor (impractical)</li>
+            <li>Before Appis deployedd, we need to install and configure database</li>
+            <li>we can set up database on the same server as the application or we use a separate server for database.</li>
+            <li>Data is important so we backup, replicate and make sure it performs under high loads/traffic</li>
+        </ul>
+        so a devops engineer should know how to configure a database, how to setup database, manage databse and restore database.
+    </p>
+    <h3>DATABASE TYPES</h3>
+    <ol>
+        <li>Key Value Database:</li>
+            <ul>
+                <li>any Key value is unique andpoints to a value</li>
+                <li>you can read data using key</li>
+                <li>you have no joints</li>
+                <li>They are very fast because they store data in memory</li>
+                <li>You cant store data</li>
+                <li>it is not fit as a primary database</li>
+                <li>it is used for caching</li>
+                <li>Twitter and snappchat uses these for real-time data delivery</li>
+            </ul>
+            example of key value databases include:
+            <ul>
+                <li>Redis</li>
+                <li>Memcached</li>
+                <li>etcd from Kubernetes</li>
+            </ul>
+        <li>Wide Column Database:</li>
+            <ul>
+                <li>it is used to store more complex value data</li>
+                <li>one key divides the value into multiple columns</li>
+                <li>it is <schema-less></schema-less></li>
+                <li>very scalable</li>
+                <li>Queries similar to SQL</li>
+                <li>no joints</li>
+                <li>It is best for TIMED-SERIES</li>
+                <li>used for keeping records of IoT devices</li>
+                <li>used for keeping historical records of an application</li>
+            </ul>
+            example of wide column database are:
+            <ul>
+                <li>cassandra</li>
+                <li>Apache Hbase</li>
+            </ul>
+        <li>Documented oriented Database:</li>
+            <ul>
+                <li>it's schema-less</li>
+                <li>documents are grouped in collection</li>
+                <li>collections can be organized into relational hierachy</li>
+                <li>no joins</li>
+                <li>faster to read</li>
+            </ul>
+            Best used for:
+            <ul>
+                <li>Mobile apps</li>
+                <li>Game apps</li>
+                <li>Content management Services (CMS)</li>
+            </ul>
+            examples are :
+            <ul>
+                <li>MongoDB</li>
+                <li>DynamoDB</li>
+                <li>CouchDb</li>
+            </ul>
+        <li>relational Database:</li>
+            <ul>
+                <li>it is the most used databse type</li>
+                <li>the data are structured</li>
+                <li>Strict schema and data types needs to be created first</li>
+                <li>It uses Structured Query Language (SQL) for reading and writing</li>
+                <li>Data is stored in tables</li>
+                <li>it contains joins</li>
+            </ul>
+            examples are:
+            <ul>
+                <li>Mysql</li>
+                <li>Postgresql</li>
+            </ul>
+        <li>Graph Database</li>
+            <ul>
+                <li>Directly connects entities</li>
+                <li>Edges are the relationship</li>
+                <li>Easier to Query</li>
+            </ul>
+            Best used for:
+            <ul>
+                <li>detecting patterns in application data</li>
+                <li>detecting relation between records</li>
+                <li>used by recommendation engines</li>
+            </ul>
+        <li>Search Database:</li>
+            <ul>
+                <li>Search databse through massive data entries</li>
+                <li>Full text search in efficient and fast way</li>
+                <li>similar to document-oriented database</li>
+            </ul>
+            exampl are;
+            <ul>
+                <li>elastic search</li>
+                <li>Solr</li>
+            </ul>
+    </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+  <footer>
+    &copy; 2025 Triddles | <a href="/">← Back to Home</a>
+  </footer>
+</body>
+</html>
