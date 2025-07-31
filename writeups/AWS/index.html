@@ -164,6 +164,15 @@
     <h3>ACCESSING SERVICES - Access key and IAM roles</h3>
     <p>
       AWS CLI configured with access keys. Acess keys are associated with IAM account. Acess key will use permissions assigned to the IAM user.
+      <h4>ACCESS KEYS AND IAM ROLES</h4>
+      <ol>
+        <li>Launch instance without a keypair</li>
+        <li>Change security group to existing</li>
+        <li>Connect instance</li>
+        <li>when terminal is hosted type <code>aws s3 ls</code></li>
+        you will get an error message, because EC2 doesn't have permissions to connect to AWS resources. To enable it, go to IAM &rarr; User &rarr; Select user &rarr; Security credentials &rarr; create access key &rarr; command line interface (CLI) &rarr; Create access key &rarr; download access keys or copy it to a safe place
+
+      </ol>
     </p>
 
    
