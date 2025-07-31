@@ -170,10 +170,23 @@
         <li>Change security group to existing</li>
         <li>Connect instance</li>
         <li>when terminal is hosted type <code>aws s3 ls</code></li>
-        you will get an error message, because EC2 doesn't have permissions to connect to AWS resources. To enable it, go to IAM &rarr; User &rarr; Select user &rarr; Security credentials &rarr; create access key &rarr; command line interface (CLI) &rarr; Create access key &rarr; download access keys or copy it to a safe place
+        you will get an error message, because EC2 doesn't have permissions to connect to AWS resources. To enable it, go to IAM &rarr; User &rarr; Select user &rarr; Security credentials &rarr; create access key &rarr; command line interface (CLI) &rarr; Create access key &rarr; download access keys or copy it to a safe place.
 
       </ol>
+      <ul>
+        <li>Go back to your instance and type <code>aws configure</code></li>
+        <li>Use credentials AWS gave you</li>
+        <li>Now run <code>aws s3 mb s3://mytestbucket12</code>(name should be unique)</li>
+        <li>now run <code>aws s3 ls</code></li>
+        But there is a security concern though, when youn "cd" into ~/.aws . you will find the config and credential file. It is stored in plaintext. you can output it.
+      </ul>
+      The better way is to create a role. IAM &rarr; roles &rarr; Create roles &rarr; EC2 instance &rarr; AmazonS3ReadOnlyAccess &rarr; give it a name &rarr; back to instance &rarr; actions &rarr; security &rarr; modify IAM role &rarr; S3readonly &rarr; Update role.
+      Now you can go to your instance and there will be no security concern.
+
+      Another way to attach role is changing the IAM instance profile to S3readonly during instance creation.
     </p>
+    <h4>AmAzon virtual private Cloud (VPC)</h4>
+  
 
    
   
