@@ -1,0 +1,52 @@
+{
+    "items": [
+        {
+            "name": "Drums",
+            "quantity": 64,
+            "price": 180,
+            "threshold": 5
+        },
+        {
+            "name": "Magenta Toner",
+            "quantity": 7,
+            "price": 550,
+            "threshold": 5
+        },
+        {
+            "name": "Yellow Toner",
+            "quantity": 8,
+            "price": 550,
+            "threshold": 5
+        },
+        {
+            "name": "Cyan toner",
+            "quantity": 9,
+            "price": 550,
+            "threshold": 5
+        },
+        {
+            "name": "Black toner",
+            "quantity": 9,
+            "price": 550,
+            "threshold": 5
+        },
+        {
+            "name": "drum blade(NEW)",
+            "quantity": 0,
+            "price": 0,
+            "threshold": 5
+        },
+        {
+            "name": "drum blade(OLD)",
+            "quantity": 0,
+            "price": 0,
+            "threshold": 5
+        }
+    ],
+    "sales": [],
+    "business_info": {
+        "name": "ASR Electrical & IT Technology LTD",
+        "address": "Aboabo-Kumasi",
+        "phone": "0242642628"
+    }
+}
