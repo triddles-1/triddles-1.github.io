@@ -186,7 +186,20 @@
       Another way to attach role is changing the IAM instance profile to S3readonly during instance creation.
     </p>
     <h4>Amazon virtual private Cloud (VPC)</h4>
-  
+    <p>
+      Within a region, there are VPCs. VPC is a logically isolated portion of the AWWS cloud within a region. It is private and you have full control. there are Availability Zones(AZ) in VPC. In each availability zone, you can set subnet. you can have multiple ubnets within the same AZ then we deploy EC2 inside them.
+      VPC router takes care of routing within the VPC and outside the VPC. If you want to access the internet, you need a gateway. the iternet gateway is attached to a VPC and used to connect to the internet. You can create more VPC within a region, you have 5 limits by default, but you can request for more if you need them.
+    </p>
+
+    <h4>AMAZON VPC COMPONENTS</h4>
+    <p>
+      <table border="1px">
+        <th>
+          <tr>VPC component</tr>
+          <tr>What it is</tr>
+        </th>
+      </table>
+    </p>
 
    
   
