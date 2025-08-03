@@ -11,7 +11,7 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://triddles-1.github.io">
   <meta property="og:image" content="https://triddles-1.github.io/thumbnail.png">
-  <title>Git & GitHub Write-up | Triddles</title>
+  <title>AWS Write-up | Triddles</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -274,9 +274,30 @@
           <td>Subnet-level firewall</td>
         </tr>
       </tbody>
-
-        
       </table>
+    </p>
+    <h4>Create a custom VPC(to be continued)</h4>
+    <p>
+      VPC &rarr; Your VPC &rarr; Create VPC &rarr; give it a name &rarr; Choose AZ you want &rarr; private subnet
+    </p>
+    <h4>AMAZON S3 OVERVIEW</h4>
+    <p>
+      S3 is an object based storing system. A bucket is a container for objects. An object is any file you upload eg. PDF,xlsx, docx ,jpg,etc. S3 is extremely scalabale. To access objects in an S3 bucket, you need a url. it looks like this <code>https://bucket.s3.aws-region.Amazonaws.com/key</code> . Your files can be from 0 bytes to 5TB max individual file. there is unlimited storage available though.
+      S3 is a universal namespace so buckets name must be unique globally, however, you create your buckets within a region. There is no hierarchy for objects within a bucket. An object consists of:
+        <ul>
+          <li>key(the name of the objects)</li>
+          <li>Version ID</li>
+          <li>Value(actual data)</li>
+          <li>Metadata</li>
+          <li>Sub resources</li>
+          <li>Access control information</li>
+        </ul>
+        <h5>CREATE A BUCKET</h5>
+        <p>
+          Amazon S3 &rarr; Buckets &rarr; Create Buckets &rarr; Bucket name &rarr; Set Region &rarr; Modify permission &rarr; Enabling Versioning &rarr;Create bucket.
+
+          Go into the bucket &rarr; you can now upload files &rarr; after uploads click on an object, it will give you the object url.
+        </p>
     </p>
 
    
