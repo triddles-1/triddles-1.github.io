@@ -11,7 +11,7 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://triddles-1.github.io">
   <meta property="og:image" content="https://triddles-1.github.io/thumbnail.png">
-  <title>Git & GitHub Write-up | Triddles</title>
+  <title>build tools Write-up | Triddles</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -63,10 +63,50 @@
       &rarr; install node +name
       &rarr; install intellij
       <h4>Build an artifact</h4>
-      &rarr; We build artifacts using a build tool, every artifact is specific to the proamming lanaguage it was coded in. Install dependencies. compile and compress. Maven uses XML and Gradle uses groovy. Both have a command line tool and commands to execute the tasks.
+      &rarr; We build artifacts using a build tool, every artifact is specific to the programming language it was coded in. Install dependencies. compile and compress. Maven uses XML and Gradle uses groovy. Both have a command line tool and commands to execute the tasks.
     </p>
-  
-
+    <p>
+      <h3>MANAGING DEPENDENCIES</h3>
+      You need the build tools locally when developing application. you need to install dependencies before you run the application. This tools also has commands to execute.
+      Note that you will need this also when you’re developing an application locally and not just for building because you need to run application so you need those dependencies to be installed before you run the application locally this tools also have commands to execute test for example, to run the test locally.
+      To an artifact repository and some maven and Gradle they both have their own dependencies file. Where dependencies and versions of those dependencies are defined , so again if you’re writing your Java springboard application you have Java classes you have spring boot classes, you have some libraries for working with the database for authentication,etc so all these are dependencies for your code and for maven they’re managed in the pom.XML file, so this is where all the dependencies are listed and for gradle is the build.gradle file.
+    </p>
+    <h3>RUN THE APPLICATION</h3>
+    <p>
+      Now we've stored artifact in it's repository and copied it to server to start application. The command for executing a java file for example is java -jar <i>java_file</i>
+    </p>
+    <h3>BUILD JS APPLICATION</h3>
+    <p>
+      If you're building an artifact with Javascript, it doesn't have a special artifact type. so we make it into a Zip or TAR file. We use npm and yarn. npm is widely used and popular. They uses package.json file to manage dependencies. npm and yarn are package managers <strong>NOT</strong> build tools. They install dependencies, but not used for transpiling Javascript code. 
+      When you try the npm, it downloads and install dependencies before the application can run. If you need some dependencies for your application, you can go to <code>https://www.npmjs.com</code> and search for it. npm uses different commands, some of them are :
+      <ul>
+        <li>npm start - start the app</li>
+        <li>npm stop - stop the app</li>
+        <li>npm test - run the tests</li>
+        <li>npm publish - publish the artifact</li>
+      </ul>
+    </p>
+    <h3>What does the zip/tar file include</h3>
+    <p>
+      It includes :
+      <ul>
+        <li>application code, but not the dependencies.</li>
+        <li>This means, you must install dependencies first before application will  run</li>
+        <li>unzip TAR/ZIP</li>
+        <li>run the app</li>
+        <li>you need to copy artifact and package.json file to server</li>
+        <li>To create an artifact out of our node json file you can use <code>npm pack</code></li>
+      </ul>
+    </p>
+    <h3>PACKAGE FRONTEND CODE</h3>
+    <p>
+      Now all the previous JS was for the backend code. to package the frontend, there are different ways;
+      <ol>
+        <li>Package frontend and backend code separately, that is each code will have their own json files.</li>
+        <li>A common package for both.</li>
+      </ol>
+      The frontend code needs to be transpiled otherwise the browser cant render it.
+    </p>
    
   
   </main>
