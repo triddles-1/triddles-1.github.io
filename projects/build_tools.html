@@ -55,7 +55,25 @@
 
   <main>
 
-  
+		<p>
+			<h3>Building artifacts with Gradle</h3>
+			To build an artifact with gradle you need to have gradle installed. or if you want the portable version make sure you have the gradlew file in your projects roots directory. For windows, sommetimes when you have the gradle installed, it still gives an error , dont worry you can just fix it with a few steps.
+			
+			<ul>
+				<li>Make sure you know the directory the gradle is located</li>
+        <li>Search for Environment variables and open it. </li><img src="images/system1.png" alt="system variables applicaion">
+        <li>click on Environment variables <img src="images/system2.png" alt=""></li>
+        <li>Under system variables click on New <img src="images/system3.png" alt=""></li>
+        <li>Type gradle as the name and use the main gradle folder's bin directory as path. <img src="images/system4.png" alt=""></li>
+        <li>Save and exit. now you can use gradle in command line</li>
+			</ul>
+      You should note that sometimes, this does not work. If it doesn't work, all you have to do is manually point to the gradle file in the bin folder. eg C:\gradle-8.13.4\bin\gradle. with this you can build the artifact. to build an artifact is quite easy. open the folder that contains your application in your text editor, in my case VSCODE editor. open a terminal and type <code>gradle build </code> and leave it to work the magic. After<img src="images/gradle1.png" alt="">. After it finishes building the artifact, It will store it in the build directory it created when building the artifacts.
+		</p>
+    <br>
+    <p>
+      <h3>Building artifacts with Maven</h3>
+      To build artifacts with maven you of course need to install the maven app. Check out my <a href="#">Installing tool</a> page if you dont have it installed. After installing you can 
+    </p>
 
    
   
