@@ -105,7 +105,7 @@
         <li>Package frontend and backend code separately, that is each code will have their own json files.</li>
         <li>A common package for both.</li>
       </ol>
-      The frontend code needs to be transpiled otherwise the browser cant render it.
+      The frontend code needs to be transpiled otherwise the browser cant render it. browsers mostly don't support latest JS versions or other fancy code decorations so we need to transpile that to standard JS syntax. It also needs to compress so its not too large for the browser to download, hence loading faster for the end-user. you can use Webpack to build code, transpile, minify and compress the code. it makes it more smaller for browsers to be able to work with.
     </p>
    
   
