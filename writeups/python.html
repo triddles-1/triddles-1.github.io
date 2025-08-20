@@ -64,8 +64,8 @@
         There are variables in python. variables are literal placeholder for values. We use the variable to stand for a data type that python allows. Python has different kinds of data type. Some of these are; Strings, Integer, Float, Boolean, etc..
         <h4>DATA TYPES</h4>
         strings are data type that are being part i double or single quotes. It is used o words,etc
-        Integer is the mormal whole negative and positive number without a decimal.
-        Float is a negative or positive decimal numberboolean is just simply yes/no, True/False. 
+        Integer is the normal whole negative and positive number without a decimal.
+        Float is a negative or positive decimal number. boolean is just simply yes/no, True/False. 
         Boolean is just yes/no, True/False.
     </p>
       <h4>PYTHON OPERATORS</h4>
@@ -73,32 +73,32 @@
       <ol>
         <li>assignment operator</li>: Operator used to assign values to variables. symbol is "=".
         <li>comparison operator</li>: Compare values and return if it's true or false.
-        <li>Membership operators</li>: Used to test if a value is a member of a sequence, likke strigns, list, etc.
+        <li>Membership operators</li>: Used to test if a value is a member of a sequence, like strings, list, etc.
         <li>Arithmetic operators</li>: Used to perform Arithmetic operators on integers or concatenate strings
         <li>Logical operators</li> Used to combine conditional statements.
       </ol>
       <h4>PYTHON LISTS</h4>
-        Lists is an ordered collection of items, it is especially iseful when you need to work with a collecction of related items. It is a container that helps you store and manage pieces of data that can be different data types. lists are put inside a square bracket "[]". eg. <code>shopping_list= ['flour', 'eggs', 'spinach', 'onion'] </code>
+        Lists is an ordered collection of items, it is especially useful when you need to work with a collection of related items. It is a container that helps you store and manage pieces of data that can be different data types. lists are put inside a square bracket "[]". eg. <code>shopping_list= ['flour', 'eggs', 'spinach', 'onion'] </code>
         We can access the elements inside by getting their index. List count start from 0. To print the first item you type <code>print(shopping_list[0])</code>. You will get an output that displays "flour" on your terminal or IDE. Use -1 to access the last item on the list, -2 for the last but one , and so forth. <br>
         To add/append item to list, we use the append() argument. eg. <code>shopping_list.append("bread")</code>. now when you print your list you will notice that there is bread being added to list. <br>
         To remove item from in list, we can use the pop() argument. You type pop, then inside the parenthesis, you give it the item you want to remove. eg. shopping_list.pop(0)</code> will remove flour from the list. <br>
-        To slice list to get portion of the list, you just need to know the indexes of the item you want. then give the range with the ":" sign. Example, <code>print(shopping_list[0:2])</code> will give you thr first two items in the list. <strong>NOTE:</strong> with slicing in python, the first indexis included in the slicing but te lat index is not. <br> To find the length of list, you need the len() argument. <code>print(len(shopping_list))</code>
+        To slice list to get portion of the list, you just need to know the indexes of the item you want. then give the range with the ":" sign. Example, <code>print(shopping_list[0:2])</code> will give you thr first two items in the list. <strong>NOTE:</strong> with slicing in python, the first index is included in the slicing but te lat index is not. <br> To find the length of list, you need the len() argument. <code>print(len(shopping_list))</code>
 
       </p>
       <h4>DICTIONARIES</h4>
       <p>
-        Dictionaries are an unordered collection of key-value pairs. It's a real-world dictionary like. You need a key to get a value. Each key is unique, so you can not have a duplicate key. it is groruped inside a curly bracket{}. eg. <code>baked_fish={"quiche":"eggs,cream,cheese","empanadas":"ground beef, vegetables and spices","chicken pot pie":"chicken, vegetables and gravy"}</code>. so when we look closely t=you'd realise that quiche,empanadas and chicke pot pie are the keys and the rest are values that corresponds to the keys. you can have different data types inside Dictionaries.
+        Dictionaries are an unordered collection of key-value pairs. It's a real-world dictionary like. You need a key to get a value. Each key is unique, so you can not have a duplicate key. it is grouped inside a curly bracket{}. eg. <code>baked_fish={"quiche":"eggs,cream,cheese","empanadas":"ground beef, vegetables and spices","chicken pot pie":"chicken, vegetables and gravy"}</code>. so when we look closely t=you'd realize that quiche,empanadas and chicken pot pie are the keys and the rest are values that corresponds to the keys. you can have different data types inside Dictionaries.
         lets create some dictionaries. <code>names = {"men":"men are very strong", "female":"they are very feminine", "children":"they are very delicate"} <br>print(names)</code>. <br> To print a value you need all you need is a key. so to print the value for men, type <code>print(names[men])</code>.   To modify the list we type <code>names['children':'little kids'] <br>print(names)</code> and see.
         <br>If you want to append a value,you just type the new key and it's value. eg. <code>names['old person']="very old people. <br>print(names)</code>. <br>
         if you want to remove a key-value pair use the "del" command. Eg. if you want to remove "old person" type <code>del names["old person"] <br>print(names)</code>
-        <br> To display differentaspects of the dictionary, we ave different methods. Eg. keys(),values() and items(). <br>
+        <br> To display different aspects of the dictionary, we ave different methods. Eg. keys(),values() and items(). <br>
         <code>print(names.keys()) <br> print(names.values()) <br> print(names.items())</code> <br>
         You can have nested dictionaries too, to include additional information or data. So lets update our variable. <code>names['men']={"description":"men are strong", "created":"first by God"} <br>print(names)</code>
       </p>
       <h4>LOOPS</h4>
       <p>
         Loops simply means iteration. We have two types of loops. We have <i>for</i> and <i>while</i> loop. <br>
-        For loop is use for defiitive repititions. That means we know the number beforehand. Eg. <code>ingredients = ['spinach','cheese','onions','mushrooms'] <br>#Use a for loop to iterate through the list <br> for ingredient in ingredients: <br>&nbsp; print(f"adding {ingredient} to the recipe.")</code> <br> 
+        For loop is use for definitive repetitions. That means we know the number beforehand. Eg. <code>ingredients = ['spinach','cheese','onions','mushrooms'] <br>#Use a for loop to iterate through the list <br> for ingredient in ingredients: <br>&nbsp; print(f"adding {ingredient} to the recipe.")</code> <br> 
         while loops use indefinite iteration. meaning the number of iteration is unknown and will only stop if the condition is false. eg <br><code>desired_cookie = 12 <br>baked_cookies = 0 <br>#use a while loop <br>while baked_cookies < desired_cookies: <br> &nbsp;  print("Baking a cookie...") <br>&nbsp;  baked_cookies_count +=1 <br>&nbsp;  print(f"we have baked {baked_cookies} cookies.)</code> <br><br> 
         <code>AWS = ['s3', 'lambda', 'EC2','RDS','Dynamo'] <br> print(AWS) <br>for service in services: <br>&nbsp;  print(AWS)</code> <br><code>
         #use a while loop to reiterates in reverse <br>
@@ -107,7 +107,7 @@
       </p>
       <h4>FUNCTION</h4>
       <p>
-        Function is a block of organized and reusable cde that performs a specific task. It helps break a program into a smaller, more manageable pieces. It is better for code reuse and modularity. it is essential for te code that is, efficient, maitanable and scalable. It is both built-in and user-defined. Either one of them is available.
+        Function is a block of organized and reusable cde that performs a specific task. It helps break a program into a smaller, more manageable pieces. It is better for code reuse and modularity. it is essential for te code that is, efficient, maintainable and scalable. It is both built-in and user-defined. Either one of them is available.
       </p>
   </main>
 

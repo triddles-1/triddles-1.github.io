@@ -59,14 +59,14 @@
         AWS stands for Amazon Web Service. it is a service that offers service such that you can host your information, application on their service for a fee. It is one of the most used web services. they have workstations over the world that host their servers.
     </p>
     <p>
-        Identity access management(IAM) is one key cocept in AWS. you need IAM to manage wat and which resource a user is entitled to. IAM principals must be authenticated to send requests (with a few exceptions). <br>A principal is a person or an applicaion that can make a request for an action or operation on an AWS resource. principals comprises of User, Role, federated user and applicaion. <br>
-        Policies control access to resources, it determines whether to authorize the request. everything in AWs is an API call. If you try to get informatiionon an EC2 instance, you will run a "Runinstance" api call. If you want to get informatiion on an S3 bucket, you will run the "GetBucket" call. If you want to create an IAM user you will use use the CreateUser api call.
+        Identity access management(IAM) is one key concept in AWS. you need IAM to manage wat and which resource a user is entitled to. IAM principals must be authenticated to send requests (with a few exceptions). <br>A principal is a person or an application that can make a request for an action or operation on an AWS resource. principals comprises of User, Role, federated user and application. <br>
+        Policies control access to resources, it determines whether to authorize the request. everything in AWs is an API call. If you try to get information an EC2 instance, you will run a "Runinstance" api call. If you want to get information on an S3 bucket, you will run the "GetBucket" call. If you want to create an IAM user you will use use the CreateUser api call.
     </p>
     <h3>SETUP INDIVIDUAL USER ACCOUNT</h3>
     <p>
         there are two types of AWS users. that is;
         <ol>
-            <li>Root user: the user is creaated with the email address used when creating an aws account in the first place. This user has full access to aws resources. It is a very poerful user, so it's best practice not to use it often. </li>
+            <li>Root user: the user is created with the email address used when creating an aws account in the first place. This user has full access to aws resources. It is a very powerful user, so it's best practice not to use it often. </li>
             <li>IAM user: A user created by the root user. it has a name and an alias or AWS Account ID. Its action is determined by the IAM permission policy.</li>
         </ol>
     <h4>CREATING AN IAM USER</h4>
@@ -91,14 +91,14 @@
             <li>click on create groups</li>
             <li>give the group a nam. eg. Admin</li>
             <li>let's give the admin group full permissions</li>
-            <li>you will find a checkbox with the name "AdminstratorAccess", check it</li>
+            <li>you will find a checkbox with the name "administratorAccess", check it</li>
             <li>select group</li>
-            when you click on the plus sign next to AdminstratorAccess you will see the policy written in json. Now you're set to add users. you can go into the group and add users.
+            when you click on the plus sign next to administratorAccess you will see the policy written in json. Now you're set to add users. you can go into the group and add users.
         </ol>
     </p>
     <h3>AMAZON ELASTIC COMPUTE CLOUD (EC2)</h3>
     <p>
-        EC2 is a way we run virtual services in the cloud. EC2 host servers in the cloud for us. It uses server virtuallization. you you launch an instance, you have to choose and instance type. that is, you select your CPU, memory, storage and networking. It determines the hardware performances and the cost. <br>
+        EC2 is a way we run virtual services in the cloud. EC2 host servers in the cloud for us. It uses server virtualization. you you launch an instance, you have to choose and instance type. that is, you select your CPU, memory, storage and networking. It determines the hardware performances and the cost. <br>
         To launch an EC2 instance;
         <ul>
             <li>Go to the AWS console and select EC2</li>
@@ -125,7 +125,7 @@
                 <li>Create a key pair. it is a private and public key.</li>
                 <li>Configure your networking</li>
                     <ul>
-                        <li>Leave VPC and sunet, unless you have a vpc and subnet you want to change to.</li>
+                        <li>Leave VPC and subnet, unless you have a vpc and subnet you want to change to.</li>
                         <li>Public IP is allowed</li>
                         <li>Create a new security group and description.</li>
                         <li>Set up rules (allow SSH for now)</li>
@@ -163,7 +163,7 @@
     </table>
     <h3>ACCESSING SERVICES - Access key and IAM roles</h3>
     <p>
-      AWS CLI configured with access keys. Acess keys are associated with IAM account. Acess key will use permissions assigned to the IAM user.
+      AWS CLI configured with access keys. access keys are associated with IAM account. access key will use permissions assigned to the IAM user.
       <h4>ACCESS KEYS AND IAM ROLES</h4>
       <ol>
         <li>Launch instance without a keypair</li>
@@ -178,7 +178,7 @@
         <li>Use credentials AWS gave you</li>
         <li>Now run <code>aws s3 mb s3://mytestbucket12</code>(name should be unique)</li>
         <li>now run <code>aws s3 ls</code></li>
-        But there is a security concern though, when youn "cd" into ~/.aws . you will find the config and credential file. It is stored in plaintext. you can output it.
+        But there is a security concern though, when your "cd" into ~/.aws . you will find the config and credential file. It is stored in plaintext. you can output it.
       </ul>
       The better way is to create a role. IAM &rarr; roles &rarr; Create roles &rarr; EC2 instance &rarr; AmazonS3ReadOnlyAccess &rarr; give it a name &rarr; back to instance &rarr; actions &rarr; security &rarr; modify IAM role &rarr; S3readonly &rarr; Update role.
       Now you can go to your instance and there will be no security concern.
@@ -187,8 +187,8 @@
     </p>
     <h4>Amazon virtual private Cloud (VPC)</h4>
     <p>
-      Within a region, there are VPCs. VPC is a logically isolated portion of the AWWS cloud within a region. It is private and you have full control. there are Availability Zones(AZ) in VPC. In each availability zone, you can set subnet. you can have multiple ubnets within the same AZ then we deploy EC2 inside them.
-      VPC router takes care of routing within the VPC and outside the VPC. If you want to access the internet, you need a gateway. the iternet gateway is attached to a VPC and used to connect to the internet. You can create more VPC within a region, you have 5 limits by default, but you can request for more if you need them.
+      Within a region, there are VPCs. VPC is a logically isolated portion of the AWS cloud within a region. It is private and you have full control. there are Availability Zones(AZ) in VPC. In each availability zone, you can set subnet. you can have multiple subnets within the same AZ then we deploy EC2 inside them.
+      VPC router takes care of routing within the VPC and outside the VPC. If you want to access the internet, you need a gateway. the internet gateway is attached to a VPC and used to connect to the internet. You can create more VPC within a region, you have 5 limits by default, but you can request for more if you need them.
     </p>
 
     <h4>AMAZON VPC COMPONENTS</h4>
@@ -282,7 +282,7 @@
     </p>
     <h4>AMAZON S3 OVERVIEW</h4>
     <p>
-      S3 is an object based storing system. A bucket is a container for objects. An object is any file you upload eg. PDF,xlsx, docx ,jpg,etc. S3 is extremely scalabale. To access objects in an S3 bucket, you need a url. it looks like this <code>https://bucket.s3.aws-region.Amazonaws.com/key</code> . Your files can be from 0 bytes to 5TB max individual file. there is unlimited storage available though.
+      S3 is an object based storing system. A bucket is a container for objects. An object is any file you upload eg. PDF,xlsx, docx ,jpg,etc. S3 is extremely scalable. To access objects in an S3 bucket, you need a url. it looks like this <code>https://bucket.s3.aws-region.Amazonaws.com/key</code> . Your files can be from 0 bytes to 5TB max individual file. there is unlimited storage available though.
       S3 is a universal namespace so buckets name must be unique globally, however, you create your buckets within a region. There is no hierarchy for objects within a bucket. An object consists of:
         <ul>
           <li>key(the name of the objects)</li>
