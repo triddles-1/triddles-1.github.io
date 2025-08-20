@@ -87,39 +87,39 @@
     <h3>REBASE(To avoid merge conflicts)</h3>
     <p>
       when a change is done remotely and local repository is not aware, when you push code, there will be a conflict. so you have to pull before
-      you can push your changes. This might be tedious. the easier way to do it and avod conflict is <code>git pull -r </code>. it pulls the latest remote repo and stack ours to it easily.
-      after youre doing rebasing you can now push with <code>git push</code>
+      you can push your changes. This might be tedious. the easier way to do it and avoid conflict is <code>git pull -r </code>. it pulls the latest remote repo and stack ours to it easily.
+      after you're doing rebasing you can now push with <code>git push</code>
     </p>
     <h3>Resolving Merge Conflicts</h3>
     <p>
-      when you get a nwerge conflict for changing the same lines of code simultaneously, you will need to manually solve the conflict
-      after manually solving it, you use the <code>git rebase --continue</code> to build it up, then yoou push it.
+      when you get a merge conflict for changing the same lines of code simultaneously, you will need to manually solve the conflict
+      after manually solving it, you use the <code>git rebase --continue</code> to build it up, then you push it.
     </p>
     <h3>.gitignore</h3>
     <p>
-      .gitignore is not a command but rather a text file that contains some informatiion, telling git to ignore some files.
+      .gitignore is not a command but rather a text file that contains some information, telling git to ignore some files.
       <ul>
         <li>Add .gitignore file to your project's root directory</li>
         <li>It is used to exclude certain files or folders from being tracked by git</li>
         <li>folders like build, .ideas and node_modules should not be tracked</li>
-        <li>list all folders and files you dont want to be tracked inside .gitignore file</li>
+        <li>list all folders and files you don't want to be tracked inside .gitignore file</li>
         <li>If there is a tracking on folders because you have already committed some of them, you can use <code>git rm -r --cached <i>file/folder</i></code></li>
         <li>after that, check git status, commit and push</li>
       </ul>
     </p>
     <h3>GIT STASH</h3>
     <p>
-      if i made some local changes and i want to switch branch without commiting the changes, maybe im not sure of the codes. when
+      if i made some local changes and i want to switch branch without committing the changes, maybe im not sure of the codes. when
       you checkout without committing you will get an error. what you need to do is to "stash" it. By typing <code>git stash</code>
-      it saves the curent changes for later. now you can checkout to anoter branch without any error message. To get back to your changes
+      it saves the current changes for later. now you can checkout to another branch without any error message. To get back to your changes
       use <code>git stash pop </code>. <br>
       Another case use is when we ake changes and there's a break in the app. we can use stashing to hide our changes temporarily to test if
       app works without our code changes.
     </p>
     <h3>Checking git history</h3>
     <p>
-      <code>git log</code> displays the history of commits and chages we've done across the developments. Each commit gets a <ul>
-        <li>unique committ hash</li>
+      <code>git log</code> displays the history of commits and changes we've done across the developments. Each commit gets a <ul>
+        <li>unique commit hash</li>
         <li>commit message</li>
         <li>author and date</li>
       </ul>
@@ -127,7 +127,7 @@
     </p>
     <h3>Undoing commits</h3>
     <p>
-      when you commit locally without pushing, then you realize that you made a mistake or tere's still some changes to be made. you use "reset --hard HEAD~1" for the 
+      when you commit locally without pushing, then you realize that you made a mistake or there's still some changes to be made. you use "reset --hard HEAD~1" for the 
       last commit. if you want the last but one commit you change it to HEAD~2. <br>
       you can use <code>git reset --soft HEAD~1</code> to keep changes but still be allowed to make changes to the commit. soft is also
       the default option, so even if you remove "-soft" from the command it still works.
@@ -142,10 +142,10 @@
     <h3>Merging branches</h3>
     <p>
       to merge , first checkout to the branch you want to perform the merge at. use <code>git branch <i>source branch</i></code>
-      where source brnch is the branch you want to merge into your working branch, it is mostly the master branch
+      where source branch is the branch you want to merge into your working branch, it is mostly the master branch
     </p>
     <h3>Git for DevOps</h3>
-    when you are in devops you will get acess to files like;<ul>
+    when you are in devops you will get access to files like;<ul>
       <li>infrastructure as a Service</li>
    
     <ol>
@@ -153,7 +153,7 @@
       <li>Terraform and ansible configuration files</li>
       <li>Bash and python scripts</li>
     </ol>
-    this files will need some changes wwith time and needs to be tracked. it must be securely stored in one place hence gitlab and
+    this files will need some changes with time and needs to be tracked. it must be securely stored in one place hence gitlab and
     github. it must be shareable for devops team.
   <li>CI/CD pipeline and Build automation</li>
   <ol>
