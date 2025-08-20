@@ -80,7 +80,7 @@
                 </ul>
             <li>option 2: DAtabase hosted remotely</li>
                 <ul>
-                    <li>pros:</li>no needd for local installation <br> start coding right away <br> test data is available right away.
+                    <li>pros:</li>no need for local installation <br> start coding right away <br> test data is available right away.
                     <li>cons:</li> cant play around without affecting others.
                 </ul>
             <li>option 3: Database have both local and remote</li>
@@ -94,31 +94,31 @@
         you also need credential and the database endpoint..
     </ul>
     <p>
-        Do not hardcode the database endpoint and credentials. Define them in one place as enviroment variables so you can confi from outside. To change database, we just change it from the configuration files.
-        <br><br>Depending on environment(dev,test,prod) it all connects to different databses. Each has a different endpoint and credentials with production being more secured.
+        Do not hardcode the database endpoint and credentials. Define them in one place as environment variables so you can config from outside. To change database, we just change it from the configuration files.
+        <br><br>Depending on environment(dev,test,prod) it all connects to different databases. Each has a different endpoint and credentials with production being more secured.
         <br>In the config files;
         <ul>
             <li>Define variable in code</li>
-            <li>Set endpoint and credentials from outside each environmnet</li>
+            <li>Set endpoint and credentials from outside each environment</li>
             <li>Pass environment variables on app start up through command line or configuration in code editor (impractical)</li>
-            <li>Before Appis deployedd, we need to install and configure database</li>
+            <li>Before App is deployed, we need to install and configure database</li>
             <li>we can set up database on the same server as the application or we use a separate server for database.</li>
             <li>Data is important so we backup, replicate and make sure it performs under high loads/traffic</li>
         </ul>
-        so a devops engineer should know how to configure a database, how to setup database, manage databse and restore database.
+        so a devops engineer should know how to configure a database, how to setup database, manage database and restore database.
     </p>
     <h3>DATABASE TYPES</h3>
     <ol>
         <li>Key Value Database:</li>
             <ul>
-                <li>any Key value is unique andpoints to a value</li>
+                <li>any Key value is unique endpoints to a value</li>
                 <li>you can read data using key</li>
                 <li>you have no joints</li>
                 <li>They are very fast because they store data in memory</li>
                 <li>You cant store data</li>
                 <li>it is not fit as a primary database</li>
                 <li>it is used for caching</li>
-                <li>Twitter and snappchat uses these for real-time data delivery</li>
+                <li>Twitter and snapchat uses these for real-time data delivery</li>
             </ul>
             example of key value databases include:
             <ul>
@@ -147,7 +147,7 @@
             <ul>
                 <li>it's schema-less</li>
                 <li>documents are grouped in collection</li>
-                <li>collections can be organized into relational hierachy</li>
+                <li>collections can be organized into relational hierarchy</li>
                 <li>no joins</li>
                 <li>faster to read</li>
             </ul>
@@ -165,7 +165,7 @@
             </ul>
         <li>relational Database:</li>
             <ul>
-                <li>it is the most used databse type</li>
+                <li>it is the most used database type</li>
                 <li>the data are structured</li>
                 <li>Strict schema and data types needs to be created first</li>
                 <li>It uses Structured Query Language (SQL) for reading and writing</li>
@@ -191,11 +191,11 @@
             </ul>
         <li>Search Database:</li>
             <ul>
-                <li>Search databse through massive data entries</li>
+                <li>Search database through massive data entries</li>
                 <li>Full text search in efficient and fast way</li>
                 <li>similar to document-oriented database</li>
             </ul>
-            exampl are;
+            example are;
             <ul>
                 <li>elastic search</li>
                 <li>Solr</li>
